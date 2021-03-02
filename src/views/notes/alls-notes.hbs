@@ -1,0 +1,19 @@
+<div class="row container">
+     {{#each notes}}
+          <div class="col-md-4">
+               <div class="card m-1">
+                    <div class="card-body">
+                         <img src="/upload/{{filename}}" alt="{{title}}" class="w-100 hei img-thumbnail">
+                         <h4 class="card-title d-flex justify-content-between ilign-items-center">
+                              {{title}} 
+                         </h4>
+                         <p>{{description}}</p>
+                         <p style="text-align: center">${{precio}}</p>
+                         <form action="/pedido/new/{{_id}}" method="GET">
+                              <button class="btn btn-block btn-primary">Comprar</button>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     {{/each}}
+</div>

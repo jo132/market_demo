@@ -1,0 +1,45 @@
+body{
+     background: url('/img/clar.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+#home-section{
+     background: url('../img/bg.jpg') no-repeat;
+     min-height: 91vh;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+.dark-overlay{
+     background-color: rgba(0, 0, 0, 0.7);
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     min-width: 100%;
+}
+
+.home-inner{
+     padding: 150px;
+}
+
+.logo{
+     width: 30%;
+}
+
+footer{
+     color: white;
+     background-color: rgb(59, 59, 59);
+}
+.row{
+     width: 100%;
+}
+
+.info-head-section{
+     background-color: white;
+}
+.hei{
+     height: 400px;
+}

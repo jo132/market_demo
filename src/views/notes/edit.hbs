@@ -1,0 +1,28 @@
+<div class="row">
+     {{#each notes}}
+          <div class="col-md-3">
+               <div class="card m-1">
+                    <div class="card-body">
+                         <img src="/upload/{{filename}}" alt="{{title}}" class="w-100 hei img-thumbnail">
+                         <h4 class="card-title d-flex justify-content-between ilign-items-center">
+                              {{title}}<a href="/notes/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                         </h4>
+                         <p>{{description}}</p>
+                         <p style="text-align: center">${{precio}}</p>
+                         <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                              <input type="hidden" name="_method" value="DELETE">
+                              <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     {{else}}
+          <div class="card mx-auto">
+               <div class="card-body">
+                    <h1>Hola {{user.name}}!!</h1>
+                    <p class="lead">Aun no hay inventario!</p>
+                    <a href="/notes/add" class="btn btn-success btn-block">Crea un producto!</a>
+               </div>
+          </div>
+     {{/each}}
+</div>
